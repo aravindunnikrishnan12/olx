@@ -1,0 +1,250 @@
+.moreView {
+    margin: 16px 16px 24px;
+    padding: 16px 16px 32px;
+    background-color: #ebeeef;
+    border-radius: 4px;
+  }
+  
+  .heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .heading :first-child {
+    font-size: 24px;
+    color: #002f34;
+  }
+  
+  .heading :last-child {
+    font-size: 14px;
+    color: #002f34;
+  }
+  
+  .recommendations .cards {
+    display: flex;
+  }
+  
+  .moreView .cards {
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+  .card {
+    position: relative;
+    margin-right: 15px;
+    padding: 10px;
+    max-width: 230px;
+    width: 230px;
+    height: auto;
+    display: inline-block;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card .favorite {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.card .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    height: 120px; /* Adjust to match image height */
+}
+
+.card .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+    transition: transform 0.3s ease;
+}
+
+.card:hover .image img {
+    transform: scale(1.05);
+}
+.card .favorite {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: white; /* White background */
+  padding: 8px; /* Adjust padding for the circle */
+  border-radius: 50%; /* Makes the background circular */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Optional: adds a shadow for better visibility */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card .favorite svg {
+  width: 24px; /* Adjust the size of the heart icon */
+  height: 24px; /* Adjust the size of the heart icon */
+  color: #ff5722; /* Adjust the color of the heart icon as needed */
+}
+
+.card .featured {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #ffcc00;
+    color: #000;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px 8px;
+    border-radius: 3px;
+}
+
+.card .content {
+    margin-top: 10px;
+}
+
+.card .content .rate {
+    font-size: 20px;
+    font-weight: bold;
+    color: #002f34;
+}
+
+.card .content .details {
+    font-size: 12px;
+    color: #777;
+    margin-top: 4px;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.card .content .name {
+    font-size: 14px;
+    font-weight: normal;
+    color: #002f34;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card .date {
+    font-size: 12px;
+    color: #777;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.card .location {
+    font-size: 12px;
+    color: #aaa;
+    margin-top: 4px;
+}
+
+.recommendations {
+  margin-top: 20px;
+}
+
+.recommendations .heading {
+  font-size: 20px;
+  font-weight:400;
+  margin-bottom: 15px;
+  text-align: left;
+  margin-left: 20px; /* Adjust this value to move the heading more to the right */
+}
+.recommendations .recommendation-title {
+  font-size: 28px; /* Increase font size */
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: left;
+  margin-left: 20px; /* Adjust to move to the right */
+  display: inline-block; /* Ensures margins are applied correctly */
+}
+
+.recommendations .cards {
+  display: flex; /* Use flexbox instead of grid */
+  flex-wrap: wrap; /* Allow wrapping */
+  justify-content: center; /* Center the cards */
+}
+
+.recommendations .card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.recommendations .card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.recommendations .favorite {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.recommendations .image {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.recommendations .image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.recommendations .content {
+  padding: 10px;
+  text-align: left;
+}
+
+.recommendations .content .rate {
+  font-size: 18px;
+  font-weight: bold;
+  color: #002f34;
+}
+
+.recommendations .content .kilometer,
+.recommendations .content .name {
+  font-size: 14px;
+  color: #555;
+  margin-top: 5px;
+}
+
+.recommendations .date {
+  padding: 10px;
+  font-size: 12px;
+  color: #aaa;
+  text-align: left;
+}
+@media (max-width: 1200px) {
+  .recommendations .cards {
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .recommendations .cards {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  }
+}
+
+@media (max-width: 576px) {
+  .recommendations .cards {
+    grid-template-columns: repeat(1, 1fr); /* 1 card per row */
+  }
+}

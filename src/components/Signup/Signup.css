@@ -1,0 +1,92 @@
+/* src/components/signup/sognup.css */
+.signupParentDiv {
+  width: 50%; 
+  max-width: 350px; 
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 6px;
+  background-color: #f9f9f9; 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Darker shadow */
+  font-weight: 700;
+}
+
+.signupParentDiv img {
+  display: block;
+  margin: 0 auto 20px; /* Center the image and add space below */
+}
+
+.signupParentDiv .input {
+ 
+  width: 100%; /* Full width of the container */
+  padding: 8px; /* Slightly more padding for better user experience */
+  margin: 10px 0; /* Increase margin to accommodate smaller form width */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  outline-color: #002f34;
+  height: 36px; /* Adjust height for consistency */
+}
+
+.signupParentDiv button {
+  width: 100%;
+  height: 40px; /* Increased height for better touch accessibility */
+  background-color: #002f34;
+  color: whitesmoke;
+  font-weight: 900;
+  border: none;
+  border-radius: 4px;
+}
+
+.signupParentDiv button:hover {
+  background-color: white;
+  color: #002f34;
+  border: 2px solid #002f34;
+}
+
+.signupParentDiv a {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #002f34;
+}
+
+.signupParentDiv a:hover {
+  color: rgb(255, 0, 0);
+}
+/* Media Queries for responsiveness */
+@media (max-width: 600px) {
+  .signupParentDiv {
+    width: 95%; /* Adjust width for smaller screens */
+    padding: 15px;
+  }
+
+  .signupParentDiv img {
+    width: 120px; /* Adjust image size for smaller screens */
+    height: auto;
+  }
+  
+  .signupParentDiv .input {
+    padding: 8px; /* Ensure padding is appropriate for smaller screens */
+    margin: 10px 0; /* Maintain spacing for small screens */
+  }
+  
+  .signupParentDiv button {
+    height: 40px; /* Maintain button height for accessibility */
+  }
+}
+
+
+.alert {
+  color: #d8000c; /* Red text color */
+  background-color: #f4dddd; /* Light red background */
+  border: 1px solid #d8000c;
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 20px;
+  text-align: center;
+}

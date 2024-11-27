@@ -1,0 +1,105 @@
+
+.footerParentDiv {
+  width: 100%; /* Use 100% instead of 100vw */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.footerParentDiv .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Align items to the start */
+  background: #ebeeef;
+  padding: 10px;
+  flex-wrap: wrap; /* Allow wrapping if content is too wide */
+}
+
+.footerParentDiv .content .heading {
+  font-size: 24px;
+  font-weight: bolder;
+}
+
+.footerParentDiv .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: #002f34;
+  color: whitesmoke;
+  flex-wrap: wrap; /* Allow wrapping for footer items */
+}
+
+.footerParentDiv .footer p {
+  margin: 0;
+}
+
+.footerParentDiv .list {
+  margin: 0;
+}
+
+.footerParentDiv .list ul {
+  list-style-type: none; /* Remove default bullets */
+  padding: 0;
+}
+
+.footerParentDiv .list .social-list {
+  display: flex;
+  gap: 10px; /* Space between icons */
+}
+
+.footerParentDiv .list .social-list li {
+  cursor: pointer; /* Change cursor on hover */
+  font-size: 24px; /* Adjust size of icons */
+  color: #002f34; /* Change color to match your theme */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footerParentDiv .content {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the left */
+  }
+
+  .footerParentDiv .content > div {
+    margin-right: 0; /* Remove right margin on smaller screens */
+    margin-bottom: 15px; /* Add margin for spacing */
+  }
+
+  .footerParentDiv .footer {
+    flex-direction: column; /* Stack footer items vertically */
+    align-items: center; /* Center footer items */
+  }
+}
+.footerParentDiv .list ul li {
+  margin: 2px 0; /* Further reduce the vertical margin */
+}
+.footerParentDiv .list {
+  margin: 0;
+}
+
+.footerParentDiv .list ul {
+  list-style-type: none; /* Remove default bullets */
+  padding: 0;
+}
+
+.footerParentDiv .list ul li {
+  margin: 5px 0; /* Reduce the vertical margin between list items */
+}
+
+.footerParentDiv .list .social-list {
+  display: flex;
+  gap: 10px; /* Space between icons */
+}
+
+.footerParentDiv .list .social-list li {
+  cursor: pointer; /* Change cursor on hover */
+  font-size: 24px; /* Adjust size of icons */
+  color: #002f34; /* Change color to match your theme */
+}
+.footerParentDiv .footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px; /* Further increase padding for more height */
+  background: #002f34;
+  color: whitesmoke;
+}

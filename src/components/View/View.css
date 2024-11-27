@@ -1,0 +1,102 @@
+.viewParentDiv {
+  padding-top: 4em;
+  display: flex;
+}
+
+.viewParentDiv .imageShowDiv {
+  padding: 16px;
+  width: 70vw;
+  display: flex;
+  flex-wrap: wrap; /* Allow images to wrap */
+  gap: 16px; /* Add space between images */
+}
+
+.viewParentDiv .imageShowDiv img {
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow to all images */
+}
+
+/* Style for the main image (the first image) */
+.viewParentDiv .imageShowDiv .mainImage {
+  width: 63vw;
+  height: 65vh;
+}
+
+/* Style for the secondary images (smaller size) */
+.viewParentDiv .imageShowDiv .secondaryImage {
+  width: 15vw;  /* Smaller width for secondary images */
+  height: 15vh; /* Smaller height for secondary images */
+  border: 2px solid rgba(0, 0, 0, 0.1); /* Add border to make it stand out */
+  object-fit: cover; /* Maintain aspect ratio */
+  transition: transform 0.3s ease; /* Add smooth hover effect */
+}
+
+/* Hover effect for secondary images */
+.viewParentDiv .imageShowDiv .secondaryImage:hover {
+  transform: scale(1.1); /* Slight zoom-in on hover */
+}
+
+
+.viewParentDiv .rightSection {
+  padding: 16px;
+  margin-top: 3em;
+  width: 30vw;
+}
+
+.viewParentDiv .rightSection .productDetails :first-child {
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #002f34;
+  font-size: 34px;
+  line-height: 32px;
+  margin-bottom: 20px;
+}
+
+.viewParentDiv .rightSection .productDetails {
+  border: 1px solid black;
+  padding: 6px;
+  border-radius: 6px;
+  margin-bottom: 2em;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow to product details */
+}
+
+.viewParentDiv .rightSection .contactDetails {
+  border: 1px solid black;
+  padding: 6px;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow to user details */
+}
+.viewParentDiv .rightSection {
+  padding: 16px;
+  margin-top: 3em;
+  margin-left: -5em; /* Adjust this value as needed */
+  width: 30vw;
+}
+
+.viewParentDiv .rightSection .contactDetails :first-child {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #002f34;
+  font-weight: 400;
+  padding: 0;
+}
+
+
+.deleteButton {
+  background-color: #ff4d4d; /* Red background */
+  color: white; /* White text color */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 15px; /* Padding for size */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  margin-top: 20px; /* Space from the top div */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.deleteButton:hover {
+  background-color: #e60000; /* Darker red on hover */
+}
+

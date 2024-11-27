@@ -1,0 +1,122 @@
+/* src/Compoents */
+
+/* .bannerParentDiv {
+  padding-top: 4em;
+}
+.bannerParentDiv .bannerChildDiv {
+}
+.bannerParentDiv .bannerChildDiv .menuBar {
+  display: flex;
+  padding: 10px 16px 10px 16px;
+}
+
+.bannerParentDiv .bannerChildDiv .menuBar span {
+}
+
+.bannerParentDiv .bannerChildDiv .menuBar .categoryMenu span {
+  margin-right: 16px;
+  font-weight: bolder;
+}
+
+.bannerParentDiv .bannerChildDiv .menuBar .otherQuickOptions {
+}
+.bannerParentDiv .bannerChildDiv .menuBar .otherQuickOptions span {
+  padding: 10px;
+}
+
+.bannerChildDiv .banner {
+  position: relative;
+  width: 100%;
+}
+.bannerChildDiv .banner img{
+  width: 100%;
+}
+
+@media only screen and (max-width: 700px) {
+  .otherQuickOptions {
+    display: none;
+  }
+  .bannerChildDiv .banner {
+    position: relative;
+  }
+} */
+
+.bannerParentDiv {
+  padding-top: 4em;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.bannerChildDiv {
+  max-width: 1400px;
+  margin: -5px auto;
+}
+
+.menuBar {
+  display: flex;
+  padding: 15px 10px;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.menuBar .categoryMenu span {
+  margin-right: 16px;
+  font-weight: bolder;
+ 
+}
+.categoryMenu span:hover {
+  color: blue; /* Change text color to blue on hover */
+}
+.scrollContainer {
+  overflow: hidden; /* Hide overflow */
+  background-color: hsl(0, 0%, 100%); /* Optional: Background for better visibility */
+}
+
+.otherQuickOptions {
+  display: flex;
+  white-space: nowrap;
+  animation: scroll 13s linear infinite;
+  animation-play-state: running;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.banner {
+  width: 100%;
+  position: relative;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media only screen and (max-width: 700px) {
+  .menuBar .otherQuickOptions {
+    display: none; /* Hide other quick options on smaller screens */
+  }
+
+  .bannerChildDiv .banner {
+    width: 100%;
+    position: relative;
+  }
+}
+
+.otherQuickOptions span {
+  padding: 10px; /* Existing padding for touch targets */
+  margin-right: 20px; /* Add space between each span */
+}
+
+.otherQuickOptions span:last-child {
+  margin-right: 0; /* Remove the margin from the last span */
+}
